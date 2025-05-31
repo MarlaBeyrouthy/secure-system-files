@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-05-30T10:16:46.382028900Z</date>
+  <millis>1748600206382</millis>
+  <nanos>28900</nanos>
+  <sequence>0</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>32</thread>
+  <message>Creating backup for qa/queen (operation: update by user: lory)</message>
+</record>
+<record>
+  <date>2025-05-30T10:16:46.394005100Z</date>
+  <millis>1748600206394</millis>
+  <nanos>5100</nanos>
+  <sequence>1</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>32</thread>
+  <message>Backup result from Node1: Backup successful</message>
+</record>
+<record>
+  <date>2025-05-30T10:17:36.968145700Z</date>
+  <millis>1748600256968</millis>
+  <nanos>145700</nanos>
+  <sequence>2</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>32</thread>
+  <message>Creating backup for qa/queen (operation: update by user: lory)</message>
+</record>
+<record>
+  <date>2025-05-30T10:17:36.970146600Z</date>
+  <millis>1748600256970</millis>
+  <nanos>146600</nanos>
+  <sequence>3</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>32</thread>
+  <message>Backup result from Node1: Recent backup already exists</message>
+</record>
+<record>
+  <date>2025-05-30T10:17:42.013634Z</date>
+  <millis>1748600262013</millis>
+  <nanos>634000</nanos>
+  <sequence>4</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>20</thread>
+  <message>Creating backup for qa/queen (operation: update by user: hbib)</message>
+</record>
+<record>
+  <date>2025-05-30T10:17:42.016636600Z</date>
+  <millis>1748600262016</millis>
+  <nanos>636600</nanos>
+  <sequence>5</sequence>
+  <logger>BackupLogger</logger>
+  <level>INFO</level>
+  <class>CoordinatorImpl</class>
+  <method>handleFileOperation</method>
+  <thread>20</thread>
+  <message>Backup result from Node1: Recent backup already exists</message>
+</record>
