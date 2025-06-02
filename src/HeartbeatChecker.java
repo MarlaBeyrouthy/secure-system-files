@@ -47,7 +47,9 @@ public class HeartbeatChecker implements Runnable {
     private void checkNodesHealth() {
         for (Node node : nodes) {
 
-            // إيقاف Node2 يدويًا للاختبار,iza bdna n3mel ikaf laa7ad el 3kd mnstkhdm had el if condiation
+            // TODO
+            // Stop one node manually (Node2)
+            // Please make compile before un commit this code for server "1-cd src  2-javac -encoding UTF-8 *.java  "
             /*if (node.getName().equals("Node2")) {
                 node.setNodeAlive(false);
                 failureCounts.put(node, MAX_FAILURES_BEFORE_EVICTION);

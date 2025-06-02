@@ -43,8 +43,10 @@ public class CoordinatorImpl extends UnicastRemoteObject implements Coordinator 
     //tsjil moustkhdm jdid bl system bystkhdem coordinatorlockly2men tzamon
     @Override
     public synchronized void registerUser(User user) throws RemoteException {
-        coordinatorLock.lock();
+        coordinatorLock.lock();//to prevent race conditions.
         try {
+            //Checks if the user exists.
+
             if (users.containsKey(user.getUsername())) {
                 logger.warning("Registration failed - Username already exists: " + user.getUsername());
                 return;
@@ -95,11 +97,7 @@ public class CoordinatorImpl extends UnicastRemoteObject implements Coordinator 
             logger.warning("Authentication failed for user: " + username);
             return false;
         }
-//asi arach trereyink vor chi grnar gartal ourish ksmeya iza asang chouzets ge hanenk
-//        if (user.getRole() == Role.EMPLOYEE && !department.equalsIgnoreCase(user.getDepartment())) {
-//            logger.warning("Permission denied for user: " + username + " on department: " + department);
-//            return false;
-//        }
+
 
 
         if (user.getRole() == Role.EMPLOYEE && !operation.equalsIgnoreCase("read") && !department.equalsIgnoreCase(user.getDepartment())) {
@@ -127,126 +125,6 @@ public class CoordinatorImpl extends UnicastRemoteObject implements Coordinator 
 
 
 
-/* try {
-            // Backup before update or delete (load-balanced)
-            if (operation.equalsIgnoreCase("update") || operation.equalsIgnoreCase("delete")) {
-                String existingContent = getFileContentFromAnyNode(department, fileName);
-                if (existingContent != null) {
-                    logger.info("Creating backup for: " + filePath + " by user: " + username);
-                    Node backupNode = loadBalancer.getNextAvailableNode();
-                    if (backupNode != null) {
-                        String backupResult = backupNode.backupFile(department, fileName, existingContent);
-                        logger.info("Backup result from " + backupNode.getName() + ": " + backupResult);
-                        if (!"Backup successful".equals(backupResult)) {
-                            logger.warning("Backup failed on " + backupNode.getName());
-                            return false; // Abort if backup fails
-                        }
-                    } else {
-                        logger.warning("No available nodes for backup");
-                        return false;
-                    }
-                }
-
-            }
-
-            // Get expected version from reference node (load-balanced)
-            int expectedVersion = 0;
-            try {
-                Node referenceNode = loadBalancer.getNextAvailableNode();
-                expectedVersion = referenceNode.getFileVersion(department, fileName);
-                logger.info("[LB] Version check node: " + referenceNode.getName());
-            } catch (Exception e) {
-                // File doesn't exist yet
-            }
-
-            boolean globalResult = true;
-            List<Node> successfulNodes = new ArrayList<>();
-
-            // Select primary node using load balancer
-            Node primaryNode = loadBalancer.getNextAvailableNode();
-            logger.info("[LB] Selected " + primaryNode.getName() + " as primary for " + operation +
-                    " | Load: " + loadBalancer.getNodeLoad(primaryNode));
-
-            if (primaryNode == null) {
-                logger.severe("No available nodes for file operation");
-                return false;
-            }
-
-
-            // Perform operation on primary node
-            try {
-                boolean primaryResult = false;
-                switch (operation.toLowerCase()) {
-                    case "add":
-                        primaryResult = "Success".equals(
-                                primaryNode.addFile(department, fileName, content, expectedVersion, username));
-                        break;
-                    case "update":
-                        primaryResult = "Success".equals(
-                                primaryNode.updateFile(department, fileName, content, expectedVersion, username));
-                        break;
-                    case "delete":
-                        primaryResult = "Success".equals(
-                                primaryNode.deleteFile(department, fileName, username));
-                        break;
-                    default:
-                        return false;
-                }
-
-                //// بعد النجاح في العقدة الأساسية من اجل التزامن الفوري
-                if (primaryResult) {
-                    successfulNodes.add(primaryNode);
-
-                    // Replicate to other nodes
-                    for (Node replicaNode : nodes) {
-                        if (!replicaNode.equals(primaryNode) && replicaNode.isNodeAlive()) {
-                            try {
-                                boolean replicaResult = false;
-                                switch (operation.toLowerCase()) {
-                                    case "add":
-                                        replicaResult = "Success".equals(
-                                                replicaNode.addFile(department, fileName, content, expectedVersion, username));
-                                        break;
-                                    case "update":
-                                        replicaResult = "Success".equals(
-                                                replicaNode.updateFile(department, fileName, content, expectedVersion, username));
-                                        break;
-                                    case "delete":
-                                        replicaResult = "Success".equals(
-                                                replicaNode.deleteFile(department, fileName, username));
-                                        break;
-                                }
-
-                                if (replicaResult) {
-                                    successfulNodes.add(replicaNode);
-                                } else {
-                                    globalResult = false;
-                                    logger.warning("Replication failed on " + replicaNode.getName());
-                                }
-                            } catch (Exception e) {
-                                globalResult = false;
-                                logger.severe("Replication error on " + replicaNode.getName() + ": " + e.getMessage());
-                            }
-                        }
-                    }
-                } else {
-                    globalResult = false;
-                    logger.severe("Primary operation failed on " + primaryNode.getName());
-                }
-            }
-            catch (Exception e) {
-                globalResult = false;
-                logger.severe("Operation failed on primary node " + primaryNode.getName() + ": " + e.getMessage());
-            }
-
-            // Rollback if any replication failed
-            if (!globalResult) {
-                rollbackOperation(operation, department, fileName, successfulNodes, username);
-                return false;
-            }
-
-            return true;
-        }*/
 
 
         //backup incremnted

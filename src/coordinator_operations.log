@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2025-05-31T10:12:40.044720100Z</date>
-  <millis>1748686360044</millis>
-  <nanos>720100</nanos>
+  <date>2025-05-31T13:36:50.766315700Z</date>
+  <millis>1748698610766</millis>
+  <nanos>315700</nanos>
   <sequence>1</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>Node added: Node1</message>
 </record>
 <record>
-  <date>2025-05-31T10:12:40.057719400Z</date>
-  <millis>1748686360057</millis>
-  <nanos>719400</nanos>
+  <date>2025-05-31T13:36:50.777911400Z</date>
+  <millis>1748698610777</millis>
+  <nanos>911400</nanos>
   <sequence>2</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
@@ -26,9 +26,9 @@
   <message>Node added: Node2</message>
 </record>
 <record>
-  <date>2025-05-31T10:12:40.061718800Z</date>
-  <millis>1748686360061</millis>
-  <nanos>718800</nanos>
+  <date>2025-05-31T13:36:50.781916500Z</date>
+  <millis>1748698610781</millis>
+  <nanos>916500</nanos>
   <sequence>3</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
@@ -38,314 +38,206 @@
   <message>Node added: Node3</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:11.094320Z</date>
-  <millis>1748686391094</millis>
-  <nanos>320000</nanos>
+  <date>2025-05-31T13:40:39.157982300Z</date>
+  <millis>1748698839157</millis>
+  <nanos>982300</nanos>
   <sequence>4</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>generateToken</method>
-  <thread>32</thread>
-  <message>Token generated for user: lory</message>
+  <method>saveUsers</method>
+  <thread>38</thread>
+  <message>Users data saved successfully</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:24.919971900Z</date>
-  <millis>1748686404919</millis>
-  <nanos>971900</nanos>
+  <date>2025-05-31T13:40:39.159985700Z</date>
+  <millis>1748698839159</millis>
+  <nanos>985700</nanos>
   <sequence>5</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Creating backup for: qa/file.txt by user: lory</message>
+  <method>registerUser</method>
+  <thread>38</thread>
+  <message>User registered successfully: marla</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:24.922972Z</date>
-  <millis>1748686404922</millis>
-  <nanos>972000</nanos>
+  <date>2025-05-31T13:40:59.222542200Z</date>
+  <millis>1748698859222</millis>
+  <nanos>542200</nanos>
   <sequence>6</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Backup result from Node1: Backup 1 created successfully</message>
+  <method>generateToken</method>
+  <thread>38</thread>
+  <message>Token generated for user: marla</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:24.929974200Z</date>
-  <millis>1748686404929</millis>
-  <nanos>974200</nanos>
+  <date>2025-05-31T13:41:58.749242700Z</date>
+  <millis>1748698918749</millis>
+  <nanos>242700</nanos>
   <sequence>7</sequence>
   <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
+  <level>WARNING</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>[LB] Version check node: Node1</message>
+  <thread>37</thread>
+  <message>Permission denied for user: marla on department: 1</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:24.937979400Z</date>
-  <millis>1748686404937</millis>
-  <nanos>979400</nanos>
+  <date>2025-05-31T13:42:17.037211700Z</date>
+  <millis>1748698937037</millis>
+  <nanos>211700</nanos>
   <sequence>8</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>[LB] Selected Node2 as primary for add | Load: 1</message>
+  <thread>37</thread>
+  <message>Creating backup for: qa/ui by user: marla</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:24.947470100Z</date>
-  <millis>1748686404947</millis>
-  <nanos>470100</nanos>
+  <date>2025-05-31T13:42:17.044212200Z</date>
+  <millis>1748698937044</millis>
+  <nanos>212200</nanos>
   <sequence>9</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Lock released for: qa/file.txt by user: lory</message>
+  <thread>37</thread>
+  <message>Backup result from Node1: Backup 1 created successfully</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:42.304540100Z</date>
-  <millis>1748686422304</millis>
-  <nanos>540100</nanos>
+  <date>2025-05-31T13:42:17.055211Z</date>
+  <millis>1748698937055</millis>
+  <nanos>211000</nanos>
   <sequence>10</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File request initiated by lory for: qa/file.txt</message>
+  <method>handleFileOperation</method>
+  <thread>37</thread>
+  <message>[LB] Version check node: Node1</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:42.306540500Z</date>
-  <millis>1748686422306</millis>
-  <nanos>540500</nanos>
+  <date>2025-05-31T13:42:17.060209300Z</date>
+  <millis>1748698937060</millis>
+  <nanos>209300</nanos>
   <sequence>11</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>Trying node: Node3 (Attempt: 1)</message>
+  <method>handleFileOperation</method>
+  <thread>37</thread>
+  <message>[LB] Selected Node2 as primary for add | Load: 1</message>
 </record>
 <record>
-  <date>2025-05-31T10:13:42.328483800Z</date>
-  <millis>1748686422328</millis>
-  <nanos>483800</nanos>
+  <date>2025-05-31T13:42:17.080217900Z</date>
+  <millis>1748698937080</millis>
+  <nanos>217900</nanos>
   <sequence>12</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File retrieved successfully from node: Node3</message>
+  <method>handleFileOperation</method>
+  <thread>37</thread>
+  <message>Lock released for: qa/ui by user: marla</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.616850100Z</date>
-  <millis>1748686441616</millis>
-  <nanos>850100</nanos>
+  <date>2025-05-31T13:48:31.105442400Z</date>
+  <millis>1748699311105</millis>
+  <nanos>442400</nanos>
   <sequence>13</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>getFileContentFromAnyNode</method>
-  <thread>32</thread>
-  <message>File content retrieved from node: Node1</message>
+  <method>generateToken</method>
+  <thread>40</thread>
+  <message>Token generated for user: hbib</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.618849300Z</date>
-  <millis>1748686441618</millis>
-  <nanos>849300</nanos>
+  <date>2025-05-31T13:48:53.620762500Z</date>
+  <millis>1748699333620</millis>
+  <nanos>762500</nanos>
   <sequence>14</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Creating backup for: qa/file.txt by user: lory</message>
+  <method>getFileContentFromAnyNode</method>
+  <thread>40</thread>
+  <message>File content retrieved from node: Node1</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.621846400Z</date>
-  <millis>1748686441621</millis>
-  <nanos>846400</nanos>
+  <date>2025-05-31T13:48:53.622844800Z</date>
+  <millis>1748699333622</millis>
+  <nanos>844800</nanos>
   <sequence>15</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Backup result from Node1: Backup 2 created successfully</message>
+  <thread>40</thread>
+  <message>Creating backup for: qa/ui by user: hbib</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.623849200Z</date>
-  <millis>1748686441623</millis>
-  <nanos>849200</nanos>
+  <date>2025-05-31T13:48:53.625754900Z</date>
+  <millis>1748699333625</millis>
+  <nanos>754900</nanos>
   <sequence>16</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>[LB] Version check node: Node1</message>
+  <thread>40</thread>
+  <message>Backup result from Node1: Backup 2 created successfully</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.624846200Z</date>
-  <millis>1748686441624</millis>
-  <nanos>846200</nanos>
+  <date>2025-05-31T13:48:53.627754800Z</date>
+  <millis>1748699333627</millis>
+  <nanos>754800</nanos>
   <sequence>17</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>[LB] Selected Node2 as primary for update | Load: 2</message>
+  <thread>40</thread>
+  <message>[LB] Version check node: Node3</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:01.628851200Z</date>
-  <millis>1748686441628</millis>
-  <nanos>851200</nanos>
+  <date>2025-05-31T13:48:53.629758700Z</date>
+  <millis>1748699333629</millis>
+  <nanos>758700</nanos>
   <sequence>18</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
   <method>handleFileOperation</method>
-  <thread>32</thread>
-  <message>Lock released for: qa/file.txt by user: lory</message>
+  <thread>40</thread>
+  <message>[LB] Selected Node1 as primary for delete | Load: 2</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:16.304080500Z</date>
-  <millis>1748686456304</millis>
-  <nanos>80500</nanos>
+  <date>2025-05-31T13:48:53.635753200Z</date>
+  <millis>1748699333635</millis>
+  <nanos>753200</nanos>
   <sequence>19</sequence>
   <logger>CoordinatorLogger</logger>
   <level>INFO</level>
   <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File request initiated by lory for: qa/file.txt</message>
+  <method>handleFileOperation</method>
+  <thread>40</thread>
+  <message>Lock released for: qa/ui by user: hbib</message>
 </record>
 <record>
-  <date>2025-05-31T10:14:16.307086500Z</date>
-  <millis>1748686456307</millis>
-  <nanos>86500</nanos>
+  <date>2025-05-31T13:49:01.663947200Z</date>
+  <millis>1748699341663</millis>
+  <nanos>947200</nanos>
   <sequence>20</sequence>
   <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
+  <level>WARNING</level>
   <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>Trying node: Node3 (Attempt: 1)</message>
-</record>
-<record>
-  <date>2025-05-31T10:14:16.322207800Z</date>
-  <millis>1748686456322</millis>
-  <nanos>207800</nanos>
-  <sequence>21</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File retrieved successfully from node: Node3</message>
-</record>
-<record>
-  <date>2025-05-31T10:14:38.701857900Z</date>
-  <millis>1748686478701</millis>
-  <nanos>857900</nanos>
-  <sequence>22</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>generateToken</method>
-  <thread>33</thread>
-  <message>Token generated for user: hbib</message>
-</record>
-<record>
-  <date>2025-05-31T10:14:53.131085600Z</date>
-  <millis>1748686493131</millis>
-  <nanos>85600</nanos>
-  <sequence>23</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>33</thread>
-  <message>File request initiated by hbib for: qa/file.txt</message>
-</record>
-<record>
-  <date>2025-05-31T10:14:53.133084900Z</date>
-  <millis>1748686493133</millis>
-  <nanos>84900</nanos>
-  <sequence>24</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>33</thread>
-  <message>Trying node: Node1 (Attempt: 1)</message>
-</record>
-<record>
-  <date>2025-05-31T10:14:53.139089200Z</date>
-  <millis>1748686493139</millis>
-  <nanos>89200</nanos>
-  <sequence>25</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>33</thread>
-  <message>File retrieved successfully from node: Node1</message>
-</record>
-<record>
-  <date>2025-05-31T10:15:10.452923900Z</date>
-  <millis>1748686510452</millis>
-  <nanos>923900</nanos>
-  <sequence>26</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>generateToken</method>
-  <thread>32</thread>
-  <message>Token generated for user: lulu</message>
-</record>
-<record>
-  <date>2025-05-31T10:15:20.546246800Z</date>
-  <millis>1748686520546</millis>
-  <nanos>246800</nanos>
-  <sequence>27</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File request initiated by lulu for: qa/file.txt</message>
-</record>
-<record>
-  <date>2025-05-31T10:15:20.548249100Z</date>
-  <millis>1748686520548</millis>
-  <nanos>249100</nanos>
-  <sequence>28</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>Trying node: Node2 (Attempt: 1)</message>
-</record>
-<record>
-  <date>2025-05-31T10:15:20.553247800Z</date>
-  <millis>1748686520553</millis>
-  <nanos>247800</nanos>
-  <sequence>29</sequence>
-  <logger>CoordinatorLogger</logger>
-  <level>INFO</level>
-  <class>CoordinatorImpl</class>
-  <method>requestFileFromNode</method>
-  <thread>32</thread>
-  <message>File retrieved successfully from node: Node2</message>
+  <method>handleFileOperation</method>
+  <thread>39</thread>
+  <message>Permission denied for user: marla on department: 2</message>
 </record>
